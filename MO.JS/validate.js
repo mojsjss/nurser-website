@@ -1,3 +1,10 @@
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log("✅ تم تفعيل الـ PWA"))
+      .catch(err => console.log("❌ خطأ في SW:", err));
+  }
+
+
 document.addEventListener("DOMContentLoaded", function () {
   // استهداف كل الفيديوهات داخل .video-grid
   const videos = document.querySelectorAll('.video-grid video');
@@ -38,7 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', handleScrollPause);
   window.addEventListener('load', handleScrollPause);
 });
-
 
   // ---------------------- ✅ القائمة الجانبية (menu) ----------------------
   const menuToggle = document.getElementById("menuToggle");
