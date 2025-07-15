@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>حضانة الزهور 🌸</title>
+  <link rel="stylesheet" href="style.css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="header-container">
+    <h1 class="logo">🌸 حضانة الزهور</h1>
+
+    <div class="menu-toggle" id="menuToggle">☰</div>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#index">الرئيسية</a>
+      <a href="#kids">المشتركين والمتخرجين</a>
+      <a href="#gallery">الأنشطة والإنجازات</a>
+    </nav>
+
+<!-- تم حذف أزرار تسجيل الدخول وإنشاء الحساب -->
+  </div>
+</header>
+
+  <section class="hero" id="index">
+    <div class="hero-text">
+      <h2>مرحبًا بكم في حضانة الزهور</h2>
+      <p>نرعى أطفالكم بالحب والعلم والمرح! 🌈</p>
+      <a href="nursery-login/login.php" class="btn">سجل طفلك الآن</a>
+    </div>
+    <!-- slide -->
+<div class="hero-image slider-container">
+<div class="slider" id="slider">
+  <img src="images/landing.jpg" alt="صورة 1">
+  <img src="images/landing2.jpg" alt="صورة 2">
+  <img src="images/landing.jpg" alt="صورة 3">
+  <img src="images/landing2.jpg" alt="صورة 4"> 
+</div>
+  <button class="prev" onclick="prevSlide()">‹</button>
+  <button class="next" onclick="nextSlide()">›</button>
+<div class="dots" id="dots">
+  <span class="dot" onclick="goToSlide(0)"></span>
+  <span class="dot" onclick="goToSlide(1)"></span>
+  <span class="dot" onclick="goToSlide(2)"></span>
+  <span class="dot" onclick="goToSlide(3)"></span>
+</div>
+</div>
+    <!-- slide -->
+
+  </section>
+
+  <section class="features">
+    <h2>لماذا حضانة الزهور؟</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <img src="images/landing.jpg" alt="أجواء سعيدة">
+        <p>أجواء آمنة وسعيدة</p>
+      </div>
+      <div class="feature">
+        <img src="images/landing.jpg" alt="تعليم">
+        <p>أنشطة تعليمية مميزة</p>
+      </div>
+      <div class="feature">
+        <img src="images/landing.jpg" alt="رعاية">
+        <p>رعاية فردية لكل طفل</p>
+      </div>
+    </div>
+  </section>
+<!-- start gallery -->
+  <div class="gallery-container" id="gallery">
+    <h2>🎨 صور الأنشطة</h2>
+    <div class="image-grid">
+      <img src="images/landing.jpg" alt="نشاط 1">
+      <img src="images/landing.jpg" alt="نشاط 2">
+      <img src="images/landing.jpg" alt="نشاط 3">
+      <img src="images/landing.jpg" alt="نشاط 4">
+    </div>
+    <h2>🎥 فيديوهات الإنجازات</h2>
+    <div class="video-grid">
+      <video controls>
+        <source src="videos/video1.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو.
+      </video>
+      <video controls>
+        <source src="videos/video2.mp4" type="video/mp4">
+        المتصفح لا يدعم تشغيل الفيديو.
+      </video>
+    </div>
+  </div>
+<!-- end gallery -->
+<!-- start kids -->
+    <h2 class="section-title" id="kids" >👶 المشتركين الحاليين</h2>
+  <div class="container">
+    <!-- start child -->
+      <div class="card">
+        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+        <h3>أحمد علي</h3>
+        <p>العمر: 5 سنوات</p>
+      </div>
+    <!-- end child -->
+    <!-- start child -->
+      <div class="card">
+        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+        <h3>أحمد علي</h3>
+        <p>العمر: 5 سنوات</p>
+      </div>
+    <!-- end child -->
+    <!-- start child -->
+      <div class="card">
+        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+        <h3>أحمد علي</h3>
+        <p>العمر: 5 سنوات</p>
+      </div>
+    <!-- end child -->
+    <!-- start child -->
+      <div class="card">
+        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+        <h3>أحمد علي</h3>
+        <p>العمر: 5 سنوات</p>
+      </div>
+    <!-- end child -->
+  
+  </div>
+  <div id="imageModal" class="image-modal">
+    <span class="close-btn" onclick="closeImage()">✖</span>
+    <img class="modal-content" id="modalImage">
+  </div>
+  <hr>
+  <h2 class="section-title" id="kids" >🎓 المتخرجين</h2>
+  <div class="container">
+
+    <div class="card">
+      <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+      <h3>ليلى حسن</h3>
+      <p>تاريخ التخرج: 2024-07-01</p>
+    </div>
+
+    <div class="card">
+      <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+      <h3>مروان سمير</h3>
+      <p>تاريخ التخرج: 2023-08-15</p>
+    </div>
+
+  </div>
+<!-- end kids -->
+ 
+  <footer>
+    <p>© 2025 حضانة الزهور - جميع الحقوق محفوظة</p>
+  </footer>
+
+<button id="scrollToTop" title="رجوع لأعلى">⬆️</button>
+    <script src="MO.JS/validate.js">
+    </script>
+</body>
+</html>
