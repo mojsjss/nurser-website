@@ -3,20 +3,26 @@
       .then(() => console.log("✅ تم تفعيل الـ PWA"))
       .catch(err => console.log("❌ خطأ في SW:", err));
   }
+  function preventTouchScroll(e) {
+    e.preventDefault();
+  }
+
   function openFormPopup() {
     document.getElementById("formPopup").style.display = "block";
     document.getElementById("overlay").style.display = "block";
 
-    // 🔒 منع السكرول في الخلفية
+    // ❌ منع سحب الشاشة باللمس
     document.body.style.overflow = "hidden";
+    document.body.addEventListener('touchmove', preventTouchScroll, { passive: false });
   }
 
   function closeFormPopup() {
     document.getElementById("formPopup").style.display = "none";
     document.getElementById("overlay").style.display = "none";
 
-    // ✅ رجّع السكرول بعد غلق البوباب
+    // ✅ إرجاع التمرير باللمس
     document.body.style.overflow = "";
+    document.body.removeEventListener('touchmove', preventTouchScroll);
   }
 
   let deferredPrompt;
