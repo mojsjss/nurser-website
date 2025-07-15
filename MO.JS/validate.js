@@ -6,11 +6,17 @@
   function openFormPopup() {
     document.getElementById("formPopup").style.display = "block";
     document.getElementById("overlay").style.display = "block";
+
+    // 🔒 منع السكرول في الخلفية
+    document.body.style.overflow = "hidden";
   }
 
   function closeFormPopup() {
     document.getElementById("formPopup").style.display = "none";
     document.getElementById("overlay").style.display = "none";
+
+    // ✅ رجّع السكرول بعد غلق البوباب
+    document.body.style.overflow = "";
   }
 
   let deferredPrompt;
