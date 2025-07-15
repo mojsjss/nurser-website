@@ -11,7 +11,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* مظهر عام للهيدر */
+/* الهيدر */
 header {
   background-color: #fefefe;
   padding: 10px 20px;
@@ -19,7 +19,6 @@ header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  direction: rtl; /* لأنك بتستخدم اللغة العربية */
 }
 
 .header-container {
@@ -37,44 +36,18 @@ header {
 
 /* القائمة */
 .nav-links {
-  display: flex;
-  gap: 20px;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  flex-direction: column;
+  gap: 10px;
 }
 
-/* زر الموبايل */
-.menu-toggle {
-  display: none;
-  font-size: 24px;
-  cursor: pointer;
+/* عند التفعيل */
+.nav-links.active {
+  max-height: 500px;
 }
 
-/* استجابة للموبايل */
-@media (max-width: 768px) {
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    background: #f9f9f9;
-    padding: 10px 0;
-    margin-top: 10px;
-  }
-
-  .nav-links.active {
-    display: flex;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-}
-
-
-.nav-links {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
+/* روابط المنيو */
 .nav-links a {
   color: #ec407a;
   margin: 0 12px;
@@ -87,41 +60,47 @@ header {
   text-decoration: underline;
 }
 
-@media (max-width: 600px) {
+/* زر الموبايل */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* مظهر الموبايل */
+@media (max-width: 768px) {
   .menu-toggle {
-        background-color: #7f339996;
-        border-radius: 19px;
-        padding: 5px;
-        width: 35px;
-        height: 35px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    display: flex;
+    background-color: #7f339996;
+    border-radius: 19px;
+    padding: 5px;
+    width: 35px;
+    height: 35px;
+    align-items: center;
+    justify-content: center;
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    align-items: center;
+    max-height: 0;
+    width: 100%;
     margin-top: 10px;
     padding: 10px 0;
     border-radius: 10px;
-  }
-
-  .nav-links.active {
     display: flex;
   }
 
   .nav-links a {
-        background-color: #ec407a;
-        width: 100%;
-        padding: 20px 0;
-        border-radius: 10px;
-        text-align: center;
-        margin: 10px 0;
-        color: #fff;
+    background-color: #ec407a;
+    width: 100%;
+    padding: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    margin: 10px 0;
+    color: #fff;
   }
+  
 }
+
 
 .hero {
   display: flex;
