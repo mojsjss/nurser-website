@@ -1,15 +1,55 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-  // ---------------------- ✅ القائمة (Menu Toggle) ----------------------
+  // استهداف كل الفيديوهات داخل .video-grid
+  const videos = document.querySelectorAll('.video-grid video');
+
+  videos.forEach(video => {
+    // 📌 عند الضغط على الفيديو: تشغيل/إيقاف
+    video.addEventListener('click', function (e) {
+      e.preventDefault(); // مهم علشان يمنع التفاعل التلقائي
+      if (this.paused) {
+        this.play();
+      } else {
+        this.pause();
+      }
+    });
+
+    // 📌 عند تشغيل فيديو: إيقاف الباقي
+    video.addEventListener('play', () => {
+      videos.forEach(other => {
+        if (other !== video && !other.paused) {
+          other.pause();
+        }
+      });
+    });
+  });
+
+  // 📌 إيقاف الفيديوهات اللي خرجت من الشاشة
+  function handleScrollPause() {
+    videos.forEach(video => {
+      const rect = video.getBoundingClientRect();
+      const isVisible = rect.top >= 0 && rect.bottom <= window.innerHeight;
+
+      if (!isVisible && !video.paused) {
+        video.pause();
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScrollPause);
+  window.addEventListener('load', handleScrollPause);
+});
+
+
+  // ---------------------- ✅ القائمة الجانبية (menu) ----------------------
   const menuToggle = document.getElementById("menuToggle");
   const navLinks = document.getElementById("navLinks");
 
-  // Toggle القائمة مع الترانزيشن
+  // فتح/غلق المنيو
   menuToggle.addEventListener("click", () => {
     navLinks.classList.toggle("active");
   });
 
-  // إغلاق القائمة عند الضغط على أي رابط
+  // غلق المنيو عند الضغط على أي رابط
   document.querySelectorAll("#navLinks a").forEach(link => {
     link.addEventListener("click", () => {
       navLinks.classList.remove("active");
@@ -106,7 +146,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
   }
-
   // ---------------------- ✅ زر الرجوع لأعلى الصفحة ----------------------
 
   // ---------------------- ✅ عرض الصور داخل مودال ----------------------
@@ -130,4 +169,4 @@ document.addEventListener("DOMContentLoaded", function () {
       closeImage();
     }
   }
-});
+
