@@ -993,3 +993,15 @@ footer p {
   color: #555;
   margin-top: 10px;
 }
+#installBtn {
+  background-color: #ffc0cb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 12px;
+  cursor: pointer;
+  margin: 15px auto;
+  display: block;
+}
+
