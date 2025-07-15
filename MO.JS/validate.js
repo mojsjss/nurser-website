@@ -3,6 +3,16 @@
       .then(() => console.log("✅ تم تفعيل الـ PWA"))
       .catch(err => console.log("❌ خطأ في SW:", err));
   }
+  function openFormPopup() {
+    document.getElementById("formPopup").style.display = "block";
+    document.getElementById("overlay").style.display = "block";
+  }
+
+  function closeFormPopup() {
+    document.getElementById("formPopup").style.display = "none";
+    document.getElementById("overlay").style.display = "none";
+  }
+
   let deferredPrompt;
   const installBtn = document.getElementById('installBtn');
 
