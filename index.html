@@ -3,151 +3,282 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حضانة الزهور 🌸</title>
+  <title>حلقة تحفيظ أبي بن كعب 📖</title>
   <link rel="stylesheet" href="style.css/style.css">
 </head>
 <body>
 
 <header>
   <div class="header-container">
-    <h1 class="logo">🌸 حضانة الزهور</h1>
+    <h1 class="logo">📖 حَلْقِهِ تَحْفَيظ أَبِي بْنِ كَعْبٍ</h1>
 
     <div class="menu-toggle" id="menuToggle">☰</div>
 
     <nav class="nav-links" id="navLinks">
       <a href="#index">الرئيسية</a>
-      <a href="#kids">المشتركين والمتخرجين</a>
-      <a href="#gallery">الأنشطة والإنجازات</a>
+      <a href="#students">الطلاب والخاتمون</a>
+      <a href="#gallery">أنشطتنا</a>
     </nav>
   </div>
 </header>
 
-  <section class="hero" id="index">
-    <div class="hero-text">
-      <h2>مرحبًا بكم في حضانة الزهور</h2>
-      <p>نرعى أطفالكم بالحب والعلم والمرح! 🌈</p>
-      <a href="nursery-login/login.php" class="btn">سجل طفلك الآن</a>
-    </div>
-    <!-- slide -->
-<div class="hero-image slider-container">
-<div class="slider" id="slider">
-  <img src="images/landing.jpg" alt="صورة 1">
-  <img src="images/landing2.jpg" alt="صورة 2">
-  <img src="images/landing.jpg" alt="صورة 3">
-  <img src="images/landing2.jpg" alt="صورة 4"> 
-</div>
-  <button class="prev" onclick="prevSlide()">‹</button>
-  <button class="next" onclick="nextSlide()">›</button>
-<div class="dots" id="dots">
-  <span class="dot" onclick="goToSlide(0)"></span>
-  <span class="dot" onclick="goToSlide(1)"></span>
-  <span class="dot" onclick="goToSlide(2)"></span>
-  <span class="dot" onclick="goToSlide(3)"></span>
-</div>
-</div>
-    <!-- slide -->
+<section class="hero" id="index">
+  <div class="hero-text">
+    <h2>أهلًا بكم في حلقة تحفيظ أبي بن كعب</h2>
+    <p class="quran-verse">🌟 ﴿ وَلَقَدْ يَسَّرْنَا الْقُرْآنَ لِلذِّكْرِ فَهَلْ مِن مُّدَّكِرٍ ﴾ <br><span></span></p>
+    <p>نُعلّم أبناءكم كتاب الله حفظًا وتدبرًا ❤️</p>
+    <a href="nursery-login/login.php" class="btn">سجل ابنك في حلقة التحفيظ</a>
+  </div>
 
-  </section>
-
-  <section class="features">
-    <h2>لماذا حضانة الزهور؟</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <img src="images/landing.jpg" alt="أجواء سعيدة">
-        <p>أجواء آمنة وسعيدة</p>
-      </div>
-      <div class="feature">
-        <img src="images/landing.jpg" alt="تعليم">
-        <p>أنشطة تعليمية مميزة</p>
-      </div>
-      <div class="feature">
-        <img src="images/landing.jpg" alt="رعاية">
-        <p>رعاية فردية لكل طفل</p>
-      </div>
+  <!-- slider -->
+  <div class="hero-image slider-container">
+    <div class="slider" id="slider">
+      <img src="images/1.jpg" alt="القرآن الكريم">
+      <img src="images/2.jpg" alt="تعليم الأطفال">
+      <img src="images/3.jpeg" alt="حلقة تحفيظ">
+      <img src="images/4.jpg" alt="أنشطة قرآنية">
     </div>
-  </section>
+    <button class="prev" onclick="prevSlide()">‹</button>
+    <button class="next" onclick="nextSlide()">›</button>
+    <div class="dots" id="dots">
+      <span class="dot" onclick="goToSlide(0)"></span>
+      <span class="dot" onclick="goToSlide(1)"></span>
+      <span class="dot" onclick="goToSlide(2)"></span>
+      <span class="dot" onclick="goToSlide(3)"></span>
+    </div>
+  </div>
+  <!-- end slider -->
+</section>
+<section class="reminders">
+  <h2>📖 فضل حفظ القرآن الكريم</h2>
+  <div class="reminder-boxes">
+    <div class="reminder">
+      <p>🌿 قال ﷺ: <q>من قرأ القرآن وتعلمه وعمل به، أُلبس والداه تاجًا من نور، ضوؤه مثل ضوء الشمس، ويُكسى والداه حلتين لا تقوم بهما الدنيا</q></p>
+      <span>— رواه الحاكم وصححه الألباني</span>
+    </div>
+    <div class="reminder">
+      <p>🌿 قال تعالى: ﴿ بَلْ هُوَ آيَاتٌ بَيِّنَاتٌ فِي صُدُورِ الَّذِينَ أُوتُوا الْعِلْمَ ﴾</p>
+      <span>— سورة العنكبوت: 49</span>
+    </div>
+
+    <div class="reminder">
+      <p>🌿 قال ﷺ: <q>خيركم من تعلم القرآن وعلّمه</q></p>
+      <span>— رواه البخاري</span>
+    </div>
+
+    <div class="reminder">
+      <p>🌿 قال ﷺ: <q>يُقال لصاحب القرآن: اقرأ وارقَ ورتّل كما كنت ترتّل في الدنيا، فإن منزلتك عند آخر آية تقرؤها</q></p>
+      <span>— رواه أبو داود والترمذي</span>
+    </div>
+
+    <div class="reminder">
+      <p>🌿 قال ﷺ: <q>إن لله أهلين من الناس. قيل: من هم يا رسول الله؟ قال: أهل القرآن، هم أهل الله وخاصته</q></p>
+      <span>— رواه أحمد وابن ماجه</span>
+    </div>
+
+  </div>
+</section>
+<section class="daily-verse">
+  <h2>📖 آية اليوم</h2>
+  <p class="quran-verse">﴿ وَرَتِّلِ الْقُرْآنَ تَرْتِيلًا ﴾ <br><span>المزمل: 4</span></p>
+</section>
+
+<section class="about">
+  <h2>📖 من نحن؟</h2>
+  <p>نحن <strong>حلقة تحفيظ أبي بن كعب</strong>، نهدف إلى بناء جيل حافظ لكتاب الله، فاهم لمعانيه، عامل بهديه. بإشراف معلمين متخصصين في تعليم القرآن الكريم وتربية الأبناء تربية إيمانية متزنة.</p>
+</section>
+<section class="goals">
+  <h2>🎯 أهداف الحلقة</h2>
+  <ul>
+    <li>تحفيظ القرآن الكريم بالتدبر والفهم</li>
+    <li>غرس حب القرآن في قلوب الأطفال</li>
+    <li>تنشئة جيل حافظ وعامل بكتاب الله</li>
+    <li>تطوير مستوى التلاوة والقراءة</li>
+  </ul>
+</section>
+
+
+<section class="features">
+  <h2>مميزات حلقتنا</h2>
+  <div class="features-grid">
+    <div class="feature">
+      <img src="images/quran1.jpg" alt="أجواء إيمانية">
+      <p>أجواء إيمانية آمنة</p>
+    </div>
+    <div class="feature">
+      <img src="images/quran1.jpg" alt="تحفيظ بإتقان">
+      <p>تحفيظ وتثبيت بإتقان</p>
+    </div>
+    <div class="feature">
+      <img src="images/quran1.jpg" alt="متابعة مستمرة">
+      <p>متابعة فردية وتقييم دوري</p>
+    </div>
+  </div>
+</section>
+<section class="plan">
+  <h2>📅 خطة الحفظ والمراجعة</h2>
+  <p>نقسم القرآن إلى مراحل مناسبة لكل فئة عمرية، وتشمل:</p>
+  <ul>
+    <li>حفظ 3-5 آيات يوميًا</li>
+    <li>مراجعة أسبوعية للسور السابقة</li>
+    <li>اختبارات شهرية في الحفظ والإتقان</li>
+  </ul>
+</section>
+<section class="manners">
+  <h2>🌟 آداب طالب القرآن</h2>
+  <ul>
+    <li>الإخلاص لله في الحفظ والتلاوة</li>
+    <li>الجلوس بأدب واحترام للمعلم والقرآن</li>
+    <li>الحضور المنتظم وعدم الغياب</li>
+    <li>احترام الزملاء ومساعدتهم</li>
+    <li>التزام الهدوء وعدم التشويش</li>
+  </ul>
+</section>
+<section class="schedule">
+  <h2>📅 الجدول الأسبوعي</h2>
+  <table>
+    <tr>
+      <th>اليوم</th>
+      <th>النشاط</th>
+      <th>الوقت</th>
+    </tr>
+    <tr>
+      <td>الأحد</td>
+      <td>حفظ جديد</td>
+      <td>4:30 - 5:30</td>
+    </tr>
+    <tr>
+      <td>الإثنين</td>
+      <td>مراجعة قديم</td>
+      <td>4:30 - 5:30</td>
+    </tr>
+    <tr>
+      <td>الثلاثاء</td>
+      <td>حفظ جديد</td>
+      <td>4:30 - 5:30</td>
+    </tr>
+    <tr>
+      <td>الأربعاء</td>
+      <td>تجويد واستماع</td>
+      <td>4:30 - 5:30</td>
+    </tr>
+    <tr>
+      <td>الخميس</td>
+      <td>اختبار ومسابقة</td>
+      <td>4:30 - 6:00</td>
+    </tr>
+  </table>
+</section>
+<section class="downloads">
+  <h2>📥 تحميلات مفيدة</h2>
+  <ul>
+    <li><a href="files/plan.pdf" download>📘 خطة الحفظ الشهرية</a></li>
+    <li><a href="files/revision.pdf" download>📗 جدول المراجعة الأسبوعي</a></li>
+    <li><a href="files/etiquette.pdf" download>📙 آداب الحلقة (PDF)</a></li>
+  </ul>
+</section>
+<section class="testimonials">
+  <h2>💬 آراء أولياء الأمور</h2>
+
+  <div class="testimonial-card">
+    <img src="images/download.jpg" alt="أم عبد الله">
+    <div class="testimonial-text">
+      <p>"ابني بدأ الحفظ من الصفر، والآن يقرأ بطلاقة الحمد لله!"</p>
+      <span>- أم عبد الله</span>
+    </div>
+  </div>
+
+  <div class="testimonial-card">
+    <img src="images/images.jpg" alt="أبو عمر">
+    <div class="testimonial-text">
+      <p>"الحلقة زرعت في طفلي حب القرآن، بارك الله فيكم"</p>
+      <span>- أبو عمر</span>
+    </div>
+  </div>
+</section>
 <!-- start gallery -->
-  <div class="gallery-container" id="gallery">
-    <h2>🎨 صور الأنشطة</h2>
-    <div class="image-grid">
-      <img src="images/landing.jpg" alt="نشاط 1">
-      <img src="images/landing.jpg" alt="نشاط 2">
-      <img src="images/landing.jpg" alt="نشاط 3">
-      <img src="images/landing.jpg" alt="نشاط 4">
-    </div>
-    <h2>🎥 فيديوهات الإنجازات</h2>
-    <div class="video-grid">
-      <video controls>
-        <source src="videos/video1.mp4" type="video/mp4">
-        المتصفح لا يدعم تشغيل الفيديو.
-      </video>
-      <video controls>
-        <source src="videos/video2.mp4" type="video/mp4">
-        المتصفح لا يدعم تشغيل الفيديو.
-      </video>
-    </div>
+<div class="gallery-container" id="gallery">
+  <h2>📸 صور من الأنشطة</h2>
+  <div class="image-grid">
+    <img src="images/ن1.jpeg" alt="نشاط">
+    <img src="images/d2.jpeg" alt="نشاط">
+    <img src="images/d3.jpeg" alt="نشاط">
+    <img src="images/d2.jpeg" alt="نشاط">
   </div>
+  <h2>🎥 فيديوهات تعليمية</h2>
+  <div class="video-grid">
+    <video controls>
+      <source src="videos/WhatsApp Video 2025-07-15 at 00.50.40_80981476.mp4" type="video/mp4">
+      المتصفح لا يدعم تشغيل الفيديو.
+    </video>
+    <video controls>
+      <source src="videos/WhatsApp Video 2025-07-15 at 00.51.29_353db1c5.mp4" type="video/mp4">
+      المتصفح لا يدعم تشغيل الفيديو.
+    </video>
+  </div>
+</div>
 <!-- end gallery -->
-<!-- start kids -->
-    <h2 class="section-title" id="kids" >👶 المشتركين الحاليين</h2>
-  <div class="container">
-    <!-- start child -->
-      <div class="card">
-        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
-        <h3>أحمد علي</h3>
-        <p>العمر: 5 سنوات</p>
-      </div>
-    <!-- end child -->
-    <!-- start child -->
-      <div class="card">
-        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
-        <h3>أحمد علي</h3>
-        <p>العمر: 5 سنوات</p>
-      </div>
-    <!-- end child -->
-    <!-- start child -->
-      <div class="card">
-        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
-        <h3>أحمد علي</h3>
-        <p>العمر: 5 سنوات</p>
-      </div>
-    <!-- end child -->
-    <!-- start child -->
-      <div class="card">
-        <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
-        <h3>أحمد علي</h3>
-        <p>العمر: 5 سنوات</p>
-      </div>
-    <!-- end child -->
-  
-  </div>
-  <div id="imageModal" class="image-modal">
-    <span class="close-btn" onclick="closeImage()">✖</span>
-    <img class="modal-content" id="modalImage">
-  </div>
-  <hr>
-  <h2 class="section-title" id="kids" >🎓 المتخرجين</h2>
-  <div class="container">
 
-    <div class="card">
-      <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
+<!-- start students -->
+<h2 class="section-title" id="students">👦 الطلاب الحاليون</h2>
+<div class="container">
+  <div class="card">
+    <img src="images/kid1.jpg" alt="طالب" onclick="openImage(this.src)">
+    <h3>محمد عبد الله</h3>
+    <p>الحفظ: من الفاتحة إلى يونس</p>
+  </div>
+  <div class="card">
+    <img src="images/kid2.jpg" alt="طالب" onclick="openImage(this.src)">
+    <h3>آمنة خالد</h3>
+    <p>الحفظ: من الفاتحة إلى النحل</p>
+  </div>
+</div>
+
+<div id="imageModal" class="image-modal">
+  <span class="close-btn" onclick="closeImage()">✖</span>
+  <img class="modal-content" id="modalImage">
+</div>
+
+<hr>
+
+<h2 class="section-title">🎓 الخاتمون</h2>
+<div class="container">
+  <div class="card">
+    <img src="images/quran1.jpg" alt="خاتم" onclick="openImage(this.src)">
+    <h3>سارة محمد</h3>
+    <p>تاريخ الختم: 2025-05-15</p>
+  </div>
+  <div class="card">
+    <img src="images/quran1.jpg" alt="خاتم" onclick="openImage(this.src)">
+    <h3>عبد الرحمن ياسر</h3>
+    <p>تاريخ الختم: 2024-12-28</p>
+  </div>
+</div>
+<section class="honors">
+  <h2>🏆 ركن المتفوقين</h2>
+  <div class="honors-grid">
+    <div class="honor-card">
+      <img src="images/kid1.jpg" alt="طالب متفوق">
+      <h3>أحمد علي</h3>
+      <p>الأسبوع الثاني من يوليو</p>
+    </div>
+    <div class="honor-card">
+      <img src="images/kid2.jpg" alt="طالبة متفوقة">
       <h3>ليلى حسن</h3>
-      <p>تاريخ التخرج: 2024-07-01</p>
+      <p>الأسبوع الأول من يوليو</p>
     </div>
-
-    <div class="card">
-      <img src="images/landing.jpg" alt="طفل" onclick="openImage(this.src)">
-      <h3>مروان سمير</h3>
-      <p>تاريخ التخرج: 2023-08-15</p>
-    </div>
-
   </div>
-<!-- end kids -->
- 
-  <footer>
-    <p>© 2025 حضانة الزهور - جميع الحقوق محفوظة</p>
-  </footer>
-    <script src="MO.JS/validate.js">
-    </script>
+</section>
+<!-- end students -->
+ <section class="faq">
+  <h2>❓ أسئلة شائعة</h2>
+  <p><strong>ما هو العمر المناسب للالتحاق؟</strong> من 5 سنوات فما فوق</p>
+  <p><strong>ما هي مواعيد الحلقة؟</strong> من بعد العصر إلى المغرب</p>
+</section>
+<footer>
+  <p>© 2025 حلقة تحفيظ أبي بن كعب - جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="MO.JS/validate.js"></script>
 </body>
 </html>
