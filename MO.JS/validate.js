@@ -3,7 +3,29 @@
       .then(() => console.log("✅ تم تفعيل الـ PWA"))
       .catch(err => console.log("❌ خطأ في SW:", err));
   }
+  let deferredPrompt;
+  const installBtn = document.getElementById('installBtn');
 
+  window.addEventListener('beforeinstallprompt', (e) => {
+    // منع ظهور البوب أب التلقائي
+    e.preventDefault();
+    deferredPrompt = e;
+    installBtn.style.display = 'inline-block'; // أظهر الزر
+  });
+
+  installBtn.addEventListener('click', async () => {
+    if (deferredPrompt) {
+      deferredPrompt.prompt(); // إظهار نافذة التثبيت
+      const { outcome } = await deferredPrompt.userChoice;
+      if (outcome === 'accepted') {
+        console.log('✅ المستخدم وافق على التثبيت');
+        installBtn.style.display = 'none';
+      } else {
+        console.log('❌ المستخدم رفض التثبيت');
+      }
+      deferredPrompt = null;
+    }
+  });
 
 document.addEventListener("DOMContentLoaded", function () {
   // استهداف كل الفيديوهات داخل .video-grid
