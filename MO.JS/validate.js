@@ -1,14 +1,20 @@
 
 document.addEventListener("DOMContentLoaded", function () {
   // ---------------------- ✅ القائمة (Menu Toggle) ----------------------
-  const toggle = document.getElementById("menuToggle");
-  const links = document.getElementById("navLinks");
+  const menuToggle = document.getElementById("menuToggle");
+  const navLinks = document.getElementById("navLinks");
 
-  if (toggle && links) {
-    toggle.addEventListener("click", () => {
-      links.classList.toggle("active");
+  // Toggle القائمة مع الترانزيشن
+  menuToggle.addEventListener("click", () => {
+    navLinks.classList.toggle("active");
+  });
+
+  // إغلاق القائمة عند الضغط على أي رابط
+  document.querySelectorAll("#navLinks a").forEach(link => {
+    link.addEventListener("click", () => {
+      navLinks.classList.remove("active");
     });
-  }
+  });
 
   // ---------------------- ✅ سلايدر الصور ----------------------
   let currentSlide = 0;
@@ -102,17 +108,6 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // ---------------------- ✅ زر الرجوع لأعلى الصفحة ----------------------
-  const scrollBtn = document.getElementById("scrollToTop");
-
-  if (scrollBtn) {
-    window.addEventListener("scroll", function () {
-      scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
-    });
-
-    scrollBtn.addEventListener("click", function () {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    });
-  }
 
   // ---------------------- ✅ عرض الصور داخل مودال ----------------------
   window.openImage = function (src) {
