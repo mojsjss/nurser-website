@@ -1,4 +1,4 @@
-/* new Reset */
+/* new2 Reset */
 body {
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ header {
 /* القائمة */
 .nav-links {
   overflow: hidden;
-  transition: max-height 0.4s ease;
+  transition:0.2s;
   flex-direction: column;
   gap: 10px;
 }
@@ -417,21 +417,16 @@ header {
 #scrollToTop {
   position: fixed;
   z-index: 1000;
-  background-color: #ec407a;
   color: white;
   border: none;
   padding: 12px 16px;
   border-radius: 50%;
   cursor: pointer;
   display: none;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   font-size: 18px;
 }
 
-#scrollTopBtn:hover,
-#scrollToTop:hover {
-  background-color: #d81b60;
-}
+
 
 #scrollToTop {
   bottom: 100px;
@@ -480,23 +475,6 @@ header {
       border: 1px solid #ccc;
       font-size: 16px;
     }
-
-    button {
-      padding: 12px;
-      background-color: #ec407a;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    button:hover {
-      background-color: #d81b60;
-    }
-
     .message {
       text-align: center;
       padding: 10px;
