@@ -994,6 +994,7 @@ footer p {
   margin-top: 10px;
 }
 #installBtn {
+  width:100%;
   background-color: #ffc0cb;
   color: white;
   border: none;
