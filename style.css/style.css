@@ -1004,3 +1004,31 @@ footer p {
     display: block;
     width: 40%;
 }
+/* سوال اليوم */
+#question {
+  font-size: 18px;
+  margin-top: 10px;
+  background-color: #f0f8ff;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+#question ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+}
+
+#question li {
+  background-color: #e6f7ff;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.3s;
+}
+
+#question li:hover {
+  background-color: #b3e5fc;
+  cursor: pointer;
+}
