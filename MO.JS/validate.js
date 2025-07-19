@@ -3,6 +3,23 @@
       .then(() => console.log("✅ تم تفعيل الـ PWA"))
       .catch(err => console.log("❌ خطأ في SW:", err));
   }
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js').then(reg => {
+    reg.onupdatefound = () => {
+      const newWorker = reg.installing;
+      newWorker.onstatechange = () => {
+        if (newWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            let reload = confirm("⚡ تم إصدار نسخة جديدة، هل تريد التحديث الآن؟");
+            if (reload) {
+              window.location.reload();
+            }
+          }
+        }
+      };
+    };
+  });
+}
   function preventTouchScroll(e) {
     e.preventDefault();
   }
